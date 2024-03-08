@@ -60,6 +60,7 @@ public class Main {
             BufferedWriter writer = new BufferedWriter(new FileWriter(nomFichier));
             writer.write(contenu);
             writer.close();
+            scan.close();
         } catch (IOException e) {
             System.err.println("Erreur lors de l'écriture dans le fichier : " + e.getMessage());
         }
