@@ -3,7 +3,7 @@ package exo1;
 import java.io.*;
 
 class Etudiant implements Serializable {
-    private static final long serialVersionUID = 1L; 
+    private static final long serialVersionUID = 1786; 
 
     private String nom;
     private int age;

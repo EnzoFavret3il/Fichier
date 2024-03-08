@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class Etudiant implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1654;
 
     private String nom;
     private int age;
