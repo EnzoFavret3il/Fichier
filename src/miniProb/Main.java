@@ -9,11 +9,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 
-        // Saisie des détails des étudiants
         ArrayList<Etudiant> listeEtudiants = new ArrayList<>();
         System.out.print("Combien d'étudiants souhaitez-vous enregistrer ? ");
         int nombreEtudiants = scanner.nextInt();
-        scanner.nextLine(); // Consommer le retour à la ligne
+        scanner.nextLine(); 
 
         for (int i = 0; i < nombreEtudiants; i++) {
             System.out.println("Étudiant " + (i + 1) + " :");
@@ -21,18 +20,16 @@ public class Main {
             String nom = scanner.nextLine();
             System.out.print("Âge : ");
             int age = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+            scanner.nextLine(); 
             System.out.print("Numéro étudiant : ");
             String numeroEtudiant = scanner.nextLine();
             listeEtudiants.add(new Etudiant(nom, age, numeroEtudiant));
         }
 
-        // Sérialisation des étudiants dans un fichier
         String nomFichier = "etudiants.ser";
         serialiserEtudiants(listeEtudiants, nomFichier);
         System.out.println("Les étudiants ont été sérialisés dans le fichier " + nomFichier);
 
-        // Recherche et affichage des détails d'un étudiant spécifique
         System.out.print("Entrez le nom de l'étudiant que vous souhaitez rechercher : ");
         String nomRecherche = scanner.nextLine();
         Etudiant etudiantTrouve = rechercherEtudiant(nomRecherche, nomFichier);
