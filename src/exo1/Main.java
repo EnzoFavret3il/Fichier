@@ -1,5 +1,6 @@
 package exo1;
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -52,8 +53,10 @@ public class Main {
 	        return etudiant;
 	    
 	}
-	public static void ecrireFichier(String nomFichier, String contenu) {
+	public static void ecrireFichier(String nomFichier) {
         try {
+        	Scanner scan=new Scanner(System.in);
+        	String contenu=scan.nextLine();
             BufferedWriter writer = new BufferedWriter(new FileWriter(nomFichier));
             writer.write(contenu);
             writer.close();
